@@ -1,17 +1,14 @@
 import React from 'react';
 import {Container, Inner, Item, Title, SubTitle, Pane, Image} from './styles/jumbotron';
 
-
-
-export default function Jumbotron( { children, direction = 'row', ...restProps } ) {          // user can pass anything. If you pass object it will apply to the first that comes in 
+export default function Jumbotron( { children, direction = 'row', ...restProps } ) {          // children always come first, user can pass anything. If you pass object it will apply to the first that comes in 
     return (
     
-        <Item direction={direction}>
-           <Inner>
+        <Item {...restProps}>                            
+           <Inner direction={direction}>
                 {children} 
            </Inner>                                                                                 {/* This is what encapsulates compound components */}
         </Item>
-
     )
 }
 

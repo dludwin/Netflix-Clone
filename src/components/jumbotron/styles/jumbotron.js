@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';                        // macro will give the name of the component in the dev tools. Instead of some random number 
 
-export const Item = styled.div`
+export const Item = styled.div`                 
     display: flex;
     border-bottom: 8px solid #222;
     padding: 50px 5%;
@@ -17,7 +17,7 @@ export const Inner = styled.div`                                     /*  h1 div 
     margin: auto;                           /* that makes marhin of Inner automatically 56 0 56 0 */
     width: 100%;
 
-    @media (max-width: 600px) {             /* when browser window is 1000px or less direction of content will be column */
+    @media (max-width: 1000px) {             /* when browser window is 1000px or less direction of content will be column */
         flex-direction: column;
     }
 `;
@@ -57,4 +57,10 @@ export const Image = styled.img`
     height: auto;
 `;
 
-export const Container = styled.div``;                  /* Container is just a name, it contains something but it can be any name */
+export const Container = styled.div`
+    @media (max-width: 1000px ){
+        ${Item}: last-of-type h2 {
+            margin-bottom: 50px;
+        }
+    }
+`;                                      
