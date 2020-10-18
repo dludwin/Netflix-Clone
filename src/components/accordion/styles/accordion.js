@@ -32,12 +32,13 @@ export const Title = styled.h1`
 
 export const Item = styled.div`
   color: white;
-  margin-bottom: 10px;
-  margin: auto;
+  margin-bottom:10px;
+  margin-left: auto;
+  margin-right:auto;
   max-width: 670px;
   width: 100%;
 
-  &:first-of-type {
+  :first-of-type {
     margin-top: 3em;
   }
 `;
