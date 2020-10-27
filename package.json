@@ -1,6 +1,6 @@
 {
 	"_comment": "without specific io/... to render images here. Links to img with . for github.io and also npm run deploy",
-	"homepage": "https://dludwin.github.io/Netflix-Clone/",
+	"homepage": "https://dludwin.github.io",
 	"name": "netflix",
 	"version": "0.1.0",
 	"private": true,
