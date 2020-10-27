@@ -7,9 +7,7 @@ export function JumbotronContainer() {
 		<Jumbotron.Container>
 			{' '}
 			{/* encapsule all the 3 jumbotrons from jumbo.json */}
-			{jumboData.map((
-				item // for each item that comes down from the map, we can iterate
-			) => (
+			{jumboData.map((item) => (
 				<Jumbotron key={item.id} direction={item.direction}>
 					{' '}
 					{/*  // need to pass key to iteration element */}
