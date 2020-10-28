@@ -1,0 +1,18 @@
+CTRL + F — search for a given word/sentence (Alt + C will match case, Alt + W will match the whole word, and Alt + R you can use regular expression)
+CTRL + H — Search and replace.
+CTRL + G — jump to line.
+CTRL + D — Find and change occurrences.
+ALT + CLICK — Repeat cursor.
+ALT + UP/DOWN ARROW — Move current line up/down.
+
+CTRL + Tab — Navigate between files.
+CTRL + B — Open/close side bar. (Ctrl + Shift + E explorer view, Ctrl + Shift + F search whole project, Ctrl + Shift + G git options, Ctrl + Shift + D debug options, Ctrl + Shift + X extensions panel).
+CTRL + | — Split editor.
+CTRL + W — Close current tab.
+CTRL + N — New tab.
+CTRL + Shift + N — New window.
+F5 — Start debug (Node, VSC Extensions, and .NET Core).
+(CTRL + K) + M — Set file language.
+Ctrl + `  terminal
+Ctrl + P search for files
+Ctrl + Shift + P (F1) Display VSC command pallete (most important)

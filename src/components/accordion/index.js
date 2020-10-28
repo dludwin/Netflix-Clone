@@ -32,6 +32,8 @@ Accordion.Item = function AccordionItem({ children, ...restProps }) {
 
 	return (
 		<ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
+			{' '}
+			{/*   we gonna use ToggleContext twice below */}
 			<Item {...restProps}>{children}</Item>
 		</ToggleContext.Provider>
 	);
