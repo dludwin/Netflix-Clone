@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`
+export const Container = styled.div`      export const Container = styled.dvi
 	display: flex;
 	flex-direction: column;
 	border-botton: 8px solid #222;

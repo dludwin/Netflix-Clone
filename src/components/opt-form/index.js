@@ -18,7 +18,7 @@ OptForm.Button = function OptFormButton({ children, ...restProps }) {
 };
 
 OptForm.Text = function OptFormText({ children, ...restProps }) {
-	return <Text {...restProps}>{children}</Text>;
+	return <Text {...restProps}>{children}</Text>; // children are "ready to watch?...."
 };
 
 OptForm.Break = function OptFormBreak({ ...restProps }) {

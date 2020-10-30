@@ -3,10 +3,10 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
     html, body {
         background-color: black;
-        -webkit-font-smoothing: antialiased;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 16px;                           /*  For inside of email and signin button */
+        
+        -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: #333333;
-        font-size: 16px;
     }
 `;

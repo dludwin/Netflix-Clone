@@ -4,7 +4,8 @@ import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 
 export function HeaderContainer({ children }) {
-	// default is not allowed
+	// HeaderContainer is container for the Header and returns only Header
+
 	return (
 		<Header>
 			<Header.Frame>
