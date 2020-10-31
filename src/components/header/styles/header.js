@@ -1,12 +1,15 @@
 import styled from 'styled-components/macro';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
+// shorthard property of background in one declaration:  background: #ffffff url("img_tree.png") no-repeat right top / cover;
+// background-size: auto/length/cover/contain/initial/inherit --> no-repeat top left / 100% 100%;
+// The header is in the Background, it's the main player. Feature is children and logo and button link and other elements, if I change flex-direction: row, then it's more visible
 export const Background = styled.div`
 	display: flex;
 	flex-direction: column;
 	background: url(${({ src }) =>
 			src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
-		top left / cover no-repeat;
+		no-repeat top left / cover;
 `;
 
 export const Container = styled.div`

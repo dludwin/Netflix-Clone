@@ -55,8 +55,8 @@ export const SubTitle = styled.h2`
 `;
 
 export const Image = styled.img`
-    max-width: 100%
-    height: auto;
+	max-width: 100%;
+	height: auto;
 `;
 
 export const Container = styled.div`
