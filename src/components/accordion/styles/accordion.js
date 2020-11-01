@@ -56,7 +56,7 @@ export const Header = styled.div`
 	align-items: center;
 
 	img {
-		filter: brightness(0) invert(1);
+		filter: brightness(100%) invert(100%);
 		width: 24px;
 
 		@media (max-width: 600px) {

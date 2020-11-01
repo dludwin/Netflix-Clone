@@ -9,7 +9,6 @@ export const Item = styled.div`
 `;
 
 export const Inner = styled.div`
-	/*  h1 div or else */
 	display: flex;
 	align-items: center;
 	flex-direction: ${({ direction }) => direction};

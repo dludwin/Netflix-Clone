@@ -21,13 +21,13 @@ export const Column = styled.div`
 export const Row = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-	grip-gap: 15px;
+	grid-gap: 0px;
 	margin-bottom: 15px;
 `;
 
 export const Link = styled.a`
 	color: #757575;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 	font-size: 13px;
 	text-decoration: none;
 `;
