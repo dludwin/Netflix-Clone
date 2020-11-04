@@ -1,28 +1,42 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'; // dom means Document Object Model
+import { BrowserRouter as Router, Switch } from 'react-router-dom'; // dom means Document Object Model
 import { Home, Browse, Signin, Signup } from './pages'; // Index in pages so I don't have to export them individually and using here Named export
 import * as ROUTES from './constants/routes';
+import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
 
 export default function App() {
-	// exact path is the only way, using only path causes a lot of problems and it's random, whatever comes first rule and weird rule for /
+	const user = null; // { name: 'd' }
+
 	return (
 		<Router>
-			{' '}
-			{/*  Router is the main engine of our App */}
-			<Route exact path={ROUTES.HOME}>
-				{' '}
-				{/* Every Route is a website and address in out application */}
-				<Home />
-			</Route>
-			<Route exact path={ROUTES.SIGN_IN}>
-				<Signin />
-			</Route>
-			<Route exact path={ROUTES.SIGN_UP}>
-				<Signup />
-			</Route>
-			<Route exact path={ROUTES.BROWSE}>
-				<Browse />
-			</Route>
+			<Switch>
+				{/* The Switch component will render exact matches, and only the exact
+				match. This makes it ideal for these nested scenarios. */}
+				<IsUserRedirect
+					user={user}
+					loggedInPath={ROUTES.BROWSE}
+					path={ROUTES.SIGN_IN}
+				>
+					<Signin />
+				</IsUserRedirect>
+				<IsUserRedirect
+					user={user}
+					loggedInPath={ROUTES.BROWSE}
+					path={ROUTES.SIGN_UP}
+				>
+					<Signup />
+				</IsUserRedirect>
+				<ProtectedRoute user={user} path={ROUTES.BROWSE}>
+					<Browse />
+				</ProtectedRoute>
+				<IsUserRedirect
+					user={user}
+					loggedInPath={ROUTES.BROWSE}
+					path={ROUTES.HOME}
+				>
+					<Home />
+				</IsUserRedirect>
+			</Switch>
 		</Router>
 	);
 }

@@ -5,7 +5,6 @@ export function FooterContainer() {
 	return (
 		<Footer>
 			<Footer.Title> Questions? Contact us.</Footer.Title>
-
 			<Footer.Row>
 				<Footer.Link href="#">FAQ</Footer.Link>
 				<Footer.Link href="#">Inverstor Relations</Footer.Link>
@@ -25,7 +24,6 @@ export function FooterContainer() {
 				<Footer.Link href="#">Cookie Preferences</Footer.Link>
 				<Footer.Link href="#">Legal Notices</Footer.Link>
 			</Footer.Row>
-
 			<Footer.Text> Netflix USA </Footer.Text>
 		</Footer>
 	);

@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { FirebaseContext } from '../context/firebase';
-import { FooterContainer } from '../containers/footer';
-import { HeaderContainer } from '../containers/header';
-import { Form } from '../components';
+import { FooterContainer } from '../containers/footer'; // We can use this again
+import { HeaderContainer } from '../containers/header'; // Login is done on the Header
+import { Form } from '../components'; // ../ import so it's in index and export { default as ..} from './..'
 import * as ROUTES from '../constants/routes';
 import { useHistory } from 'react-router-dom';
 
@@ -38,8 +38,8 @@ export default function Signin() {
 			<HeaderContainer>
 				<Form>
 					<Form.Title> Sign in </Form.Title>
-					{error && <Form.Error>{error}</Form.Error>}{' '}
-					{/* Jesli jest error to wyswitl basic if statement */}
+					{error && <Form.Error>{error}</Form.Error>}
+
 					<Form.Base onSubmit={handleSignIn} method="POST">
 						<Form.Input
 							placeholder="Email address"
@@ -58,7 +58,7 @@ export default function Signin() {
 						</Form.Submit>
 					</Form.Base>
 					<Form.Text>
-						New to Netflix? <Form.Link to="/signup"></Form.Link>
+						New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
 					</Form.Text>
 					<Form.TextSmall>
 						This page is protected by Google reCAPTCHA to ensure you're not a
