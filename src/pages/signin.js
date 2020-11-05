@@ -1,13 +1,13 @@
 import React, { useState, useContext } from 'react';
-import { FirebaseContext } from '../context/firebase';
+import { FirebaseContext } from '../context/firebase'; // We creted empty createContext in context/firebase
 import { FooterContainer } from '../containers/footer'; // We can use this again
 import { HeaderContainer } from '../containers/header'; // Login is done on the Header
-import { Form } from '../components'; // ../ import so it's in index and export { default as ..} from './..'
+import { Form } from '../components'; //  it's in index and export { default as ..} from './..'
 import * as ROUTES from '../constants/routes';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'; // I don't know how this works
 
 export default function Signin() {
-	const history = useHistory();
+	const history = useHistory(); // what's history exactly?
 	const { firebase } = useContext(FirebaseContext);
 	const [emailAddress, setEmailAddress] = useState('');
 	const [password, setPassword] = useState('');
