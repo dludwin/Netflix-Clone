@@ -10,8 +10,7 @@ export default function App() {
 	return (
 		<Router>
 			<Switch>
-				{/* The Switch component will render exact matches, and only the exact
-				match. This makes it ideal for these nested scenarios. */}
+				{/* The Switch component will render exact matches, and only the exact match. */}
 				<IsUserRedirect
 					user={user}
 					loggedInPath={ROUTES.BROWSE}
@@ -19,6 +18,7 @@ export default function App() {
 				>
 					<Signin />
 				</IsUserRedirect>
+
 				<IsUserRedirect
 					user={user}
 					loggedInPath={ROUTES.BROWSE}
@@ -26,9 +26,11 @@ export default function App() {
 				>
 					<Signup />
 				</IsUserRedirect>
+
 				<ProtectedRoute user={user} path={ROUTES.BROWSE}>
 					<Browse />
 				</ProtectedRoute>
+
 				<IsUserRedirect
 					user={user}
 					loggedInPath={ROUTES.BROWSE}
