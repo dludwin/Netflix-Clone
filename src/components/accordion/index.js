@@ -1,10 +1,10 @@
 import React, { useState, useContext, createContext } from 'react';
 import {
 	Container,
-	Frame,
-	Title,
-	Item,
 	Inner,
+	Title,
+	Frame,
+	Item,
 	Header,
 	Body,
 } from './styles/accordion';
@@ -32,8 +32,6 @@ Accordion.Item = function AccordionItem({ children, ...restProps }) {
 
 	return (
 		<ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
-			{' '}
-			{/*   we gonna use ToggleContext twice below */}
 			<Item {...restProps}>{children}</Item>
 		</ToggleContext.Provider>
 	);

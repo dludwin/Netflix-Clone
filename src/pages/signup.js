@@ -7,7 +7,7 @@ import * as ROUTES from '../constants/routes';
 import { useHistory } from 'react-router-dom';
 
 export default function Signup() {
-	const history = useHistory();
+	const history = useHistory(); // when someone signups redirect to browse page
 	const { firebase } = useContext(FirebaseContext);
 
 	const [firstName, setFirstName] = useState('');
@@ -30,7 +30,7 @@ export default function Signup() {
 						photoURL: Math.floor(Math.random() * 5) + 1,
 					})
 					.then(() => {
-						history.push(ROUTES.BROWSE);
+						history.push(ROUTES.BROWSE); // if everything is okay go to browse
 					})
 			)
 			.catch((error) => {

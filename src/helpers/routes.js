@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-
+// This is used in the App.js. If user is LoggedIn we redirect them to laggedInPath which is BROWSE
 export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
 	return (
 		<Route
 			{...rest}
 			render={() => {
 				if (!user) {
-					return children; // children is page component
+					return children; // component page of signin, basically <Signin />
 				}
 
 				if (user) {
@@ -25,7 +25,7 @@ export function ProtectedRoute({ user, children, ...rest }) {
 			{...rest}
 			render={({ location }) => {
 				if (user) {
-					return children;
+					return children; // if the user is logged-in return browse page
 				}
 				if (!user) {
 					return (

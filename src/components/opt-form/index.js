@@ -6,6 +6,7 @@ export default function OptForm({ children, ...restProps }) {
 }
 
 OptForm.Input = function OptFormInput({ ...restProps }) {
+	// Input doesn't pass any children because user needs to type there
 	return <Input {...restProps} />;
 };
 
@@ -18,7 +19,7 @@ OptForm.Button = function OptFormButton({ children, ...restProps }) {
 };
 
 OptForm.Text = function OptFormText({ children, ...restProps }) {
-	return <Text {...restProps}>{children}</Text>; // children are "ready to watch?...."
+	return <Text {...restProps}>{children}</Text>;
 };
 
 OptForm.Break = function OptFormBreak({ ...restProps }) {
