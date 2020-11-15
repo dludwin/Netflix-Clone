@@ -2,8 +2,9 @@ import { useEffect, useState, useContext } from 'react';
 import { FirebaseContext } from '../context/firebase';
 
 export default function useContent(target) {
+	// target is series or films
 	// target is movie or series
-	const [content, setContent] = useState([]);
+	const [content, setContent] = useState([]); // array by default
 	const { firebase } = useContext(FirebaseContext);
 
 	useEffect(() => {
@@ -13,8 +14,8 @@ export default function useContent(target) {
 			.get()
 			.then((snapshot) => {
 				const allContent = snapshot.docs.map((contentObj) => ({
-					...contentObj.data(),
-					docId: contentObj.id,
+					...contentObj.data(), // spreading that data there because we want document id
+					docId: contentObj.id, // react specific
 				}));
 				setContent(allContent);
 			})
@@ -24,5 +25,5 @@ export default function useContent(target) {
 		// eslint-disable-next-line
 	}, []);
 
-	return { [target]: content };
+	return { [target]: content }; // return new object with the target series of films, and sign up with content
 }

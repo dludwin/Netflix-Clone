@@ -7,7 +7,7 @@ export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
 			{...rest}
 			render={() => {
 				if (!user) {
-					return children; // component page of signin, basically <Signin />
+					return children; // component page - signin/signup etc
 				}
 
 				if (user) {
