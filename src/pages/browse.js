@@ -4,7 +4,7 @@ import { selectionFilter } from '../utils/selection-filter';
 
 export default function Browse() {
 	// we need the series and the films
-	const { series } = useContent('series');
+	const { series } = useContent('series'); // object destructuring
 	const { films } = useContent('films');
 
 	// we need slides. Netflix works on rows with slides
