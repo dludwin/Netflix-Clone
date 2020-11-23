@@ -2,9 +2,8 @@ import { useEffect, useState, useContext } from 'react';
 import { FirebaseContext } from '../context/firebase';
 
 export default function useContent(target) {
-	// target is series or films
-	// target is movie or series
-	const [content, setContent] = useState([]); // array by default
+	// target is series / films
+	const [content, setContent] = useState([]); // Empty array by default
 	const { firebase } = useContext(FirebaseContext);
 
 	useEffect(() => {
