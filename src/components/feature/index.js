@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Title, SubTitle } from './styles/feature';
 
+//  Feature is relatively simple, it has only 2 texts and imports OptForm
+
 export default function Feature({ children, ...restProps }) {
 	return <Container {...restProps}>{children}</Container>;
 }

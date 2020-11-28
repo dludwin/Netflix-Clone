@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div`      export const Container = styled.dvi
+export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	border-botton: 8px solid #222;
+	border-botton: 18px solid #222;
 	text-align: center;
 	padding: 165px 45px;
 `;
