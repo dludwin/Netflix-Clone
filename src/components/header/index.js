@@ -7,6 +7,7 @@ import {
 	Container,
 	Logo,
 	Feature,
+	Text,
 } from './styles/header';
 
 export default function Header({ bg = true, children, ...restProps }) {
@@ -15,6 +16,10 @@ export default function Header({ bg = true, children, ...restProps }) {
 
 Header.Feature = function HeaderFeature({ children, ...restProps }) {
 	return <Feature {...restProps}>{children}</Feature>;
+};
+
+Header.Text = function HeaderText({ children, ...restProps }) {
+	return <Text {...restProps}>{children}</Text>;
 };
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
