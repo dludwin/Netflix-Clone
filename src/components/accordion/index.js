@@ -14,7 +14,7 @@ const ToggleContext = createContext();
 export default function Accordion({ children, ...restProps }) {
 	return (
 		<Container {...restProps}>
-			<Inner>{children}</Inner> // Everything is in the Inner
+			<Inner>{children}</Inner>
 		</Container>
 	);
 }

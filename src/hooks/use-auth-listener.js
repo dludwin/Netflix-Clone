@@ -4,11 +4,11 @@ import { FirebaseContext } from '../context/firebase';
 export default function useAuthListener() {
 	// listening whether user is loggedIn or loggedOut
 	const [user, setUser] = useState(
-		JSON.parse(localStorage.getItem('authUser')) // we need to store the data that user is logged in somewhere
-	); // we can check if we have user in local storage. json.parse creates js string or object 
+		JSON.parse(localStorage.getItem('authUser')) // we need to store the data that user is logged in
+	); // we can check if we have user in local storage. json.parse creates js string or object
 	const { firebase } = useContext(FirebaseContext); // listen to firebase on authentication state changed
 
-	// This is where React comes to play. Run on the first iteration and bind listener that's gonna listen for us
+	//  Run on the first iteration and bind listener that's gonna listen for us
 	useEffect(() => {
 		const listener = firebase.auth().onAuthStateChanged((authUser) => {
 			if (authUser) {
@@ -21,7 +21,7 @@ export default function useAuthListener() {
 			}
 		});
 
-		return () => listener();
+		return () => listener(); // just in case it doesn' work
 		// eslint-disable-next-line
 	}, []);
 

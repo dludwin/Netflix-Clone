@@ -7,13 +7,8 @@ import faqsData from '../fixtures/faqs';
 export function FaqsContainer() {
 	return (
 		<Accordion>
-			{' '}
-			// Accordion returns Container that has Inner children Inner. The entire
-			content is in the Inner
 			<Accordion.Title>Frequently Asked Questions</Accordion.Title>
 			<Accordion.Frame>
-				{' '}
-				// Map creates new array for each item of the faqsData
 				{faqsData.map((item) => (
 					<Accordion.Item key={item.id}>
 						<Accordion.Header>{item.header}</Accordion.Header>
