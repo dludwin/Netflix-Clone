@@ -29,6 +29,17 @@ export const Container = styled.div`
 	}
 `;
 
+export const Feature = styled(Container)`
+	padding: 150px 0 500px 0;
+	flex-direction: column;
+	align-items: normal;
+	width: 50%;
+
+	@media (max-width: 1100px) {
+		display: none;
+	}
+`;
+
 export const Logo = styled.img`
 	height: 32px;
 	width: 108px;
