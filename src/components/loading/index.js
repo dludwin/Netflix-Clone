@@ -5,7 +5,7 @@ export default function Loading({ src, ...restProps }) {
 	return (
 		<Spinner {...restProps}>
 			<LockBody /> {/* no scrolling */}
-			<Picture src={`/images/users/${src}.png`} data-testid="loading-picture" />
+			<Picture src={`/images/users/${src}.png`} />
 		</Spinner>
 	);
 }
