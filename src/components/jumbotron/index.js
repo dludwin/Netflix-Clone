@@ -14,7 +14,6 @@ export default function Jumbotron({
 	direction = 'row',
 	...restProps
 }) {
-	// children always come first, user can pass anything. If you pass object it will apply to the first that comes in
 	return (
 		<Item {...restProps}>
 			<Inner direction={direction}>{children}</Inner>

@@ -7,7 +7,6 @@ import {
 	Container,
 	Logo,
 	Feature,
-	FeatureCallOut,
 	Text,
 } from './styles/header';
 

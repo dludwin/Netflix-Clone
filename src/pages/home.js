@@ -2,7 +2,7 @@ import React from 'react';
 import { Feature, OptForm } from '../components';
 import { HeaderContainer } from '../containers/header';
 import { JumbotronContainer } from '../containers/jumbotron';
-import { FooterContainer } from '../containers/footer'; // ../ means down one level, it's not in App.js and ./ can't be used
+import { FooterContainer } from '../containers/footer';
 import { FaqsContainer } from '../containers/faqs';
 
 export default function Home() {

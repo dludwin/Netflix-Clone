@@ -1,13 +1,13 @@
 import React, { useState, useContext } from 'react';
-import { FirebaseContext } from '../context/firebase'; // We creted empty createContext in context/firebase
-import { FooterContainer } from '../containers/footer'; // We can use this again
-import { HeaderContainer } from '../containers/header'; // Login is done on the Header
-import { Form } from '../components'; //  it's in index and export { default as ..} from './..'
+import { FirebaseContext } from '../context/firebase';
+import { FooterContainer } from '../containers/footer';
+import { HeaderContainer } from '../containers/header';
+import { Form } from '../components';
 import * as ROUTES from '../constants/routes';
-import { useHistory } from 'react-router-dom'; // I don't know how this works
+import { useHistory } from 'react-router-dom';
 
 export default function Signin() {
-	const history = useHistory(); // what's history exactly?
+	const history = useHistory();
 	const { firebase } = useContext(FirebaseContext);
 	const [emailAddress, setEmailAddress] = useState('');
 	const [password, setPassword] = useState('');
@@ -16,14 +16,12 @@ export default function Signin() {
 	const isInvalid = password === '' || emailAddress === '';
 
 	const handleSignIn = (event) => {
-		event.preventDefault(); // don't want to post to this particular page, instead will do some magic
+		event.preventDefault(); // don't want to post to this particular page.
 
-		// firebase work here!
 		firebase
 			.auth()
 			.signInWithEmailAndPassword(emailAddress, password)
 			.then(() => {
-				// push to the browse page
 				history.push(ROUTES.BROWSE);
 			})
 			.catch((error) => {
