@@ -26,14 +26,15 @@ export function ProtectedRoute({ user, children, ...rest }) {
 		<Route
 			{...rest}
 			render={({ location }) => {
+				if (!user) {
+					return (
+						<Redirect to={{ pathname: 'signin', state: { from: location } }} />
+					);
+				}
 				if (user) {
 					return children; // if the user is logged-in return browse page
 				}
-				if (!user) {
-					return (
-						<Redirect to={{ pathname: 'singin', state: { from: location } }} />
-					);
-				}
+
 				return null;
 			}}
 		/>

@@ -43,3 +43,7 @@ export default function App() {
 		</Router>
 	);
 }
+
+// SPAs are based on a single document model. This means that web applications’ lifespan happens on a single html page,
+// along with the transitions between the different views. But since links no longer imply the fetching and generation of a new document,
+// how are those transitions modelled? they are achieved by using a router.
