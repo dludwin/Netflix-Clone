@@ -2,6 +2,7 @@ import React from 'react';
 import { Accordion, OptForm } from '../components';
 import faqsData from '../fixtures/faqs';
 
+
 // Everything that's inside Containers is the children
 
 export function FaqsContainer() {

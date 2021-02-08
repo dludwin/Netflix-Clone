@@ -1,13 +1,10 @@
 import styled from 'styled-components/macro';
-
+/* display: flex    It enables a flex context for all its direct children. */
+/* margin: auto     Used to create space around elements, outside of any defined borders. Browser calculates the margin */
 export const Container = styled.div`
 	display: flex;
 	margin: auto;
 	border-bottom: 8px solid #222;
-`;
-
-export const Frame = styled.div`
-	margin-bottom: 40px;
 `;
 
 export const Inner = styled.div`
@@ -17,6 +14,10 @@ export const Inner = styled.div`
 	max-width: 815px;
 	margin-left: auto;
 	margin-right: auto;
+`;
+
+export const Frame = styled.div`
+	margin-bottom: 40px;
 `;
 
 export const Title = styled.h1`
