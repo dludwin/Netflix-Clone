@@ -1,0 +1,40 @@
+Fixtures - equipment, which holds .json. Objects with key and value
+
+Components - elements   styles folder /  index.js
+    Styled-components (macro gives components name)
+    You can pass any symantic element. styled.div`"css"`
+ 
+ctlr+shift+f to search for file or text
+
+display: flex 
+This defines a flex container;
+ inline or block depending on the given value.
+  It enables a flex context for all its direct children.
+
+align-items: Defines how flex items are laid out along the 
+    Y-axis. (flex-start - at the top)
+    (flex-end, center, stretch - whole space)
+    (baseline - center point in the middle of container)
+
+justify-content: The same but on X-axis
+(flex-start, everything on the left)
+(flex-end, center, space-between, space-around, space-evenly)
+
+How to pass a prop: desctruture prop ${({ direction }) => direction}
+
+Image to the left or to the right. 
+
+Template literals can contain placeholders. 
+These are indicated by the dollar sign and curly braces
+(${expression}). The expressions in the placeholders 
+and the text between the backticks (` `) get passed
+to a function.
+
+Containers contains inner workings of pages 
+    {jumboData.map((item) => (
+
+    ))}      for each item that comes from jumboData. 
+W JumbotronContainer utworzone zostaja trzy Jumbotrony kazdy z direction
+Jumbotron.Pane - tafelka 
+
+In React you have to pass id to iteration element
