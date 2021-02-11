@@ -38,3 +38,60 @@ W JumbotronContainer utworzone zostaja trzy Jumbotrony kazdy z direction
 Jumbotron.Pane - tafelka 
 
 In React you have to pass id to iteration element
+
+{children} in Jumbotron is actually the data
+prop is src={item.image} alt={item.alt} in <Jumbotron.Image ../>
+
+ctrl+d selects the same names 
+
+Jumbotron.Image doesn't return any children
+
+Pane  width: 50%    beacuse we need something on the left and something on the right
+styled.img``;
+
+Image (max-width: 100%; heigth: auto)
+export const SubTitle (font-size:26px, font-weight:normal)
+(line-height: normal)
+
+export const Title(line-height:1.1, margin-bottom: 8px)
+
+Jumbotron needs Item and then Inner, so it doesn't have that border at the bottom
+Item is a div a width of 100 and goes entire page and Inner goes with some 1000px
+And then some modifications to Item as full size border
+
+overflow: (visible/hidden/clip/scroll/auto/overlay)
+Content is clipped to fit the padding box. 
+No scrollbars are provided. 
+
+In order for overflow to have an effect, the block-level 
+container must have either a set height(height or max-height)
+or white-space set to nowrap 
+
+Must render fragment in index.js 
+<> ... </> 
+
+import { createGlobalStyle} from 'styled-components';
+export const GlobalStyles
+
+Somewhere is that annoying margin-padding ruining experience for user 
+import 'normalize.css' fixes that margin-padding
+
+I call call any other constant in styles 
+	export const Container ... 
+    ${Item}: last-of-type h2 {
+			margin-bottom: 50px;
+		}
+
+We take code from app.js and put that into Container for Jumbotron because it's big page
+
+Container Jumbotron without default because: 
+we export as default in the tree shaking in components index.js
+
+Have to be careful what to pull into the project
+So it's better to have relative imports. 
+In components we export default as all components in index.js 
+And it allows to use from '../components'; 
+It's tree shaking
+
+Add .env with SKIP_PREFLIGHT_CHECK=true discrepency between what we installing and values that we have GlobalStyles
+
