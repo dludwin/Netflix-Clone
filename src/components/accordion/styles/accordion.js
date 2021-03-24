@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-/* display: flex    It enables a flex context for all its direct children. */
+/* display: flex    It enables a flex context for all it's direct children. */
 /* margin: auto     Used to create space around elements, outside of any defined borders. Browser calculates the margin */
 export const Container = styled.div`
 	display: flex;
