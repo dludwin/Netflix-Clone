@@ -15,8 +15,10 @@ export default function Jumbotron({
 	...restProps
 }) {
 	return (
+		// Gray border at the bottom is necessary so we need Item to do that
 		<Item {...restProps}>
-			<Inner direction={direction}>{children}</Inner>
+			<Inner direction={direction}>{children}</Inner>{' '}
+			{/*Children is everything that's within */}
 		</Item>
 	);
 }

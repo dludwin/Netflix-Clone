@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'; // macro will give the name of the component in the dev tools. Instead of some random number
 
 export const Item = styled.div`
+	/* Item is made for that border at the bottom */
 	display: flex;
 	border-bottom: 8px solid #222;
 	padding: 50px 5%;
@@ -14,7 +15,7 @@ export const Inner = styled.div`
 	flex-direction: ${({ direction }) => direction};
 	justify-content: space-between;
 	max-width: 1100px;
-	margin: auto; /* that makes marhin of Inner automatically 56 0 56 0 */
+	margin: auto; /* that makes margin of Inner automatically 56 0 56 0 */
 	width: 100%;
 
 	@media (max-width: 1000px) {

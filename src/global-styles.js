@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 16px;                           /*  For inside of email and signin button */
 
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;    /* Smooth look on certain browsers */
         -moz-osx-font-smoothing: grayscale;
     }
 `;

@@ -7,3 +7,6 @@ export { default as Feature } from './feature';
 export { default as Form } from './form';
 export { default as Profiles } from './profiles';
 export { default as Loading } from './loading';
+
+// This is done so we dont have to type sth from ./sth1/sht2 sth2 from ./somewhere
+// But instead { one, two, ..} from ./somewhere
