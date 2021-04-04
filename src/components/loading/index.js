@@ -1,5 +1,5 @@
 import React from 'react';
-import { LockBody, ReleaseBody, Spinner, Picture } from './styles/loading';
+import { LockBody, ReleaseBody, Spinner, Picture } from './styles/loading'; // Spinner and LockBody are interesting
 
 export default function Loading({ src, ...restProps }) {
 	return (
@@ -11,5 +11,6 @@ export default function Loading({ src, ...restProps }) {
 }
 
 Loading.ReleaseBody = function LoadingReleaseBody() {
+	// put background to normal
 	return <ReleaseBody />;
 };

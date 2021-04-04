@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // Footer doesn't have anything special expect how to get scaling it well with reducing web size
 import {
 	Container,
 	Row,

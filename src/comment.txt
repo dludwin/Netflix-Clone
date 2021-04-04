@@ -1,14 +1,14 @@
-Fixtures - equipment, which holds .json. Objects with key and value
-
+Fixtures - equipment, which holds .json. Objects with key and value that we work on
+Containers are containing all the code
+Constants - Routes (const) to certain pages. const BROWSE = '/browse';
 Components - elements   styles folder /  index.js
     Styled-components (macro gives components name)
     You can pass any symantic element. styled.div`"css"`
- 
-ctlr+shift+f to search for file or text
+Context - Create and take context from firebase
+
 
 display: flex 
 This defines a flex container;
- inline or block depending on the given value.
  It enables a flex context for all its direct children.
 
 align-items: Defines how flex items are laid out along the 
@@ -21,8 +21,6 @@ justify-content: The same but on X-axis
 (flex-end, center, space-between, space-around, space-evenly)
 
 How to pass a prop: destructure prop ${({ direction }) => direction}
-
-Image to the left or to the right. 
 
 Template literals can contain placeholders. 
 These are indicated by the dollar sign and curly braces
@@ -95,4 +93,4 @@ It's tree shaking
 
 Add .env with SKIP_PREFLIGHT_CHECK=true discrepency between what we installing and values that we have GlobalStyles
 
-
+ctlr+shift+f to search for file or text

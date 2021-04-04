@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom';
 // This is used in the App.js. If user is LoggedIn we redirect them to logedInPath which is BROWSE
 export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
 	return (
-		<Route
+		<Route // we gonna exchange that with App.js Route
 			{...rest}
 			render={() => {
 				if (!user) {

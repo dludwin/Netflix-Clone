@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // Form doesn't have anything special
 import {
 	Container,
 	Base,

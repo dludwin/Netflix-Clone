@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { useState, useContext, createContext } from 'react'; // A lot of login going here. Build in light matter, from mapping on json
 import {
 	Container,
 	Inner,
@@ -7,10 +7,13 @@ import {
 	Item,
 	Header,
 	Body,
-} from './styles/accordion';
+} from './styles/accordion'; // we import those created elements from styles. They were created and styled there
 
-const ToggleContext = createContext();
-
+// [==========]  Container max-width
+//     [===] Item smaller 800px
+// [==========]
+const ToggleContext = createContext(); // Toggle - switch from one effect, feature, or state to another by using a toggle.
+// default for easy export
 export default function Accordion({ children, ...restProps }) {
 	return (
 		<Container {...restProps}>
@@ -42,6 +45,7 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
 	return (
 		<Header onClick={() => setToggleShow(!toggleShow)} {...restProps}>
 			{children}
+			{/* <pre> {JSON.stringify(toggleShow, null, 2)}</pre> */}
 			{toggleShow ? (
 				<img src="./images/icons/close-slim.png" alt="Close" />
 			) : (

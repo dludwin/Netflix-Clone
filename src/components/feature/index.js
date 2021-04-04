@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, SubTitle } from './styles/feature';
+import { Container, Title, SubTitle } from './styles/feature';         
 
 //  Feature is relatively simple, it has only 2 texts and imports OptForm
 

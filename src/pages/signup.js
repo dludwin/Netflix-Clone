@@ -27,13 +27,14 @@ export default function Signup() {
 				result.user
 					.updateProfile({
 						displayName: firstName,
-						photoURL: Math.floor(Math.random() * 5) + 1,
+						photoURL: Math.floor(Math.random() * 5) + 1, // random number from 1 to 5. Assign random image
 					})
 					.then(() => {
 						history.push(ROUTES.BROWSE); // if everything is okay go to browse
 					})
 			)
 			.catch((error) => {
+				// on error clear user data
 				setFirstName('');
 				setEmailAddress('');
 				setPassword('');

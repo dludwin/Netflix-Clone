@@ -8,5 +8,7 @@ export { default as Form } from './form';
 export { default as Profiles } from './profiles';
 export { default as Loading } from './loading';
 
+// reference to all of the compontents created
 // This is done so we dont have to type sth from ./sth1/sht2 sth2 from ./somewhere
-// But instead { one, two, ..} from ./somewhere
+// But instead { one, two, ..} from ../somewhere
+// import { Accordion, OptForm } from '../components';

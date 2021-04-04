@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'; // Grid is important and minmax. flex-basis
 
 export const Container = styled.div`
 	display: flex;

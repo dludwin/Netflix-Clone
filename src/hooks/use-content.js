@@ -9,13 +9,14 @@ export default function useContent(target) {
 	useEffect(() => {
 		firebase
 			.firestore()
-			.collection(target)
+			.collection(target) // 'series' for example. Different collections from firebase
 			.get()
 			.then((snapshot) => {
+				// take snapshot of that data
 				const allContent = snapshot.docs.map((contentObj) => ({
-					...contentObj.data(), // spreading that data there because we want document id
-					docId: contentObj.id, // react specific
-				}));
+					...contentObj.data(), // spreading that (content object) data there because we want document id
+					docId: contentObj.id, // docId that's what we want. react specific
+				}));                       // docId for certain keys for each slice item
 				setContent(allContent);
 			})
 			.catch((error) => {

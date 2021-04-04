@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // Simple one thing is that Item to get border, Image different
 import {
 	Container,
 	Inner,
@@ -17,8 +17,7 @@ export default function Jumbotron({
 	return (
 		// Gray border at the bottom is necessary so we need Item to do that
 		<Item {...restProps}>
-			<Inner direction={direction}>{children}</Inner>{' '}
-			{/*Children is everything that's within */}
+			<Inner direction={direction}>{children}</Inner>
 		</Item>
 	);
 }

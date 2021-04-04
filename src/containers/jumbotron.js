@@ -19,3 +19,5 @@ export function JumbotronContainer() {
 		</Jumbotron.Container>
 	);
 }
+
+// Containers are containing all the code
