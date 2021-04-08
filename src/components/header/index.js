@@ -13,6 +13,7 @@ import {
 	Picture,
 	Profile,
 	Dropdown,
+	PlayButton,
 	Group,
 	Text,
 	Search,
@@ -91,6 +92,10 @@ Header.Search = function HeaderSearch({
 			/>
 		</Search>
 	);
+};
+
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+	return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 
 Header.Picture = function HeaderPicture({ src, ...restProps }) {

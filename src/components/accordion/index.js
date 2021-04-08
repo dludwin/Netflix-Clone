@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from 'react'; // A lot of login going here. Build in light matter, from mapping on json
+import React, { useState, useContext, createContext } from 'react'; // Build in light matter, from mapping on json
 import {
 	Container,
 	Inner,
@@ -58,5 +58,5 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
 Accordion.Body = function AccordionBody({ children, ...restProps }) {
 	const { toggleShow } = useContext(ToggleContext);
 
-	return toggleShow ? <Body {...restProps}>{children}</Body> : null;
+	return toggleShow ? <Body {...restProps}>{children}</Body> : null; // item.body are the children so this is actual data
 };
